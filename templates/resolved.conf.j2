@@ -1,0 +1,45 @@
+# This file is maintained with Ansible
+
+[Resolve]
+{% if systemd_resolved.dns is defined %}
+DNS={{ systemd_resolved.dns | join(" ") }}
+{% endif %}
+{% if systemd_resolved.fallback_dns is defined %}
+FallbackDNS={{ systemd_resolved.fallback_dns | join(" ") }}
+{% endif %}
+{% if systemd_resolved.domains is defined %}
+Domains={{ systemd_resolved.domains | join(" ") }}
+{% endif %}
+{% if systemd_resolved.dnssec is defined %}
+DNSSEC={{ systemd_resolved.dnssec }}
+{% endif %}
+{% if systemd_resolved.dns_over_tls is defined %}
+DNSOverTLS={{ systemd_resolved.dns_over_tls }}
+{% endif %}
+{% if systemd_resolved.multicast_dns is defined %}
+MulticastDNS={{ systemd_resolved.multicast_dns }}
+{% endif %}
+{% if systemd_resolved.llmnr is defined %}
+LLMNR={{ systemd_resolved.llmnr }}
+{% endif %}
+{% if systemd_resolved.cache is defined %}
+Cache={{ systemd_resolved.cache }}
+{% endif %}
+{% if systemd_resolved.cache_from_localhost is defined %}
+CacheFromLocalhost={{ systemd_resolved.cache_from_localhost }}
+{% endif %}
+{% if systemd_resolved.dns_stub_listener is defined %}
+DNSStubListener={{ systemd_resolved.dns_stub_listener }}
+{% endif %}
+{% if systemd_resolved.dns_stub_listener_extra is defined %}
+DNSStubListenerExtra={{ systemd_resolved.dns_stub_listener_extra }}
+{% endif %}
+{% if systemd_resolved.read_etc_hosts is defined %}
+ReadEtcHosts={{ systemd_resolved.read_etc_hosts }}
+{% endif %}
+{% if systemd_resolved.resolve_unicast is defined %}
+ResolveUnicastSingleLabel={{ systemd_resolved.resolve_unicast }}
+{% endif %}
+{% if systemd_resolved.stale_retention is defined %}
+StaleRetentionSec={{ systemd_resolved.stale_retention }}
+{% endif %}

@@ -1,0 +1,10 @@
+---
+
+- hosts: localhost
+  connection: local
+
+  roles:
+    - ./
+  vars:
+    systemd_resolved:
+      dns: ["1.0.0.1", "8.8.8.8"]

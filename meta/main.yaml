@@ -1,0 +1,12 @@
+galaxy_info:
+  role_name: ansible_systemd_resolved
+  author: Simon Berka
+  description: Role that manages configuration of systemd-resolved.
+  issue_tracker_url: https://github.com/berkas1/ansible-systemd-resolved/issues
+  license: MIT
+  platforms:
+    - name: Debian
+    - name: Ubuntu
+  galaxy_tags: ["systemd", "resolved", "dns"]
+  min_ansible_version: "2.10"
+dependencies: []

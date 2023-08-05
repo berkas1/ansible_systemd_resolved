@@ -1,0 +1,8 @@
+---
+
+- name: Systemd-resolved reload
+  become: true
+  ansible.builtin.systemd:
+    name: systemd-resolved
+    state: restarted
+  listen: systemd-resolved.reload
